@@ -39,7 +39,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="141" width="288" height="21"/>
+                                    <rect key="frame" x="16" y="254" width="288" height="21"/>
                                 </variation>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed0-E9-FQt">
@@ -57,12 +57,50 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="249" y="28" width="55" height="30"/>
+                                    <rect key="frame" x="249" y="36" width="55" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="convertButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XQM-ks-mBD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Women's Shoe Conversion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwu-nK-FmD">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="141" width="208" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESF-GR-9qe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="249" y="137" width="55" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="convertWomensButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BKN-Ai-I0w"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe size here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtS-5F-GFy">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="170" width="288" height="30"/>
+                                </variation>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B6-74-g2H">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="208" width="288" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -72,6 +110,10 @@
                                 <exclude reference="tAW-0O-0v4"/>
                                 <exclude reference="ed0-E9-FQt"/>
                                 <exclude reference="pMs-Cs-gTt"/>
+                                <exclude reference="xwu-nK-FmD"/>
+                                <exclude reference="ESF-GR-9qe"/>
+                                <exclude reference="OtS-5F-GFy"/>
+                                <exclude reference="8B6-74-g2H"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -81,6 +123,10 @@
                                 <include reference="tAW-0O-0v4"/>
                                 <include reference="ed0-E9-FQt"/>
                                 <include reference="pMs-Cs-gTt"/>
+                                <include reference="xwu-nK-FmD"/>
+                                <include reference="ESF-GR-9qe"/>
+                                <include reference="OtS-5F-GFy"/>
+                                <include reference="8B6-74-g2H"/>
                             </mask>
                         </variation>
                     </view>
@@ -88,7 +134,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="convertedShoeSizeLabel" destination="ed0-E9-FQt" id="02e-vB-y0s"/>
-                        <outlet property="mensShowSizeTextField" destination="0ru-r8-TXN" id="L8A-7Q-9OT"/>
+                        <outlet property="convertedWomensShoeSizeLabel" destination="8B6-74-g2H" id="zmf-K9-ZF6"/>
+                        <outlet property="mensShoeSizeTextField" destination="0ru-r8-TXN" id="Ytl-TB-gpr"/>
+                        <outlet property="womensShoeSizeTextField" destination="OtS-5F-GFy" id="dgi-HZ-E1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
